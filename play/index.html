@@ -19,7 +19,7 @@
 	<link rel="shortcut icon" href="/favicons/favicon.ico">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#0b1d31">
-
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 	<!-- OG Details -->
 	<meta property="og:title" content="TapTapTap" />
 	<meta property="og:description" content="Open source tapping game built with Javascript" />
@@ -70,7 +70,7 @@
 				<input type="radio" name="pT" class="toggleCheckbox" id="pauseMenuPageToggle">Pause Menu Page
 			</label>
 			<label class="vzbltyLabel" for="youLostPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="youLostPageToggle">You Lost Page
+				<input type="radio" name="pT" class="toggleCheckbox" id="youLostPageToggle">VOCÊ PERDEU Page
 			</label>
 			<label class="vzbltyLabel" for="levelPassedPageToggle">
 				<input type="radio" name="pT" class="toggleCheckbox" id="levelPassedPageToggle">Level Passed Page
@@ -98,9 +98,9 @@
 					<h1 class="gm-menu-title">Tap Tap Tap</h1>
 					<h2 class="gm-menu-subtitle">Every Tap Matters</h2>
 				</div>
-				<button id="newGameBtn" class="gm-btn btn-blue" type="button" name="button">New Game</button>
+				<button id="newGameBtn" class="gm-btn btn-blue" type="button" name="button">Novo Jogo</button>
 				<!-- <button id="highScoresBtn" class="gm-btn" type="button" name="button">Best Score</button> -->
-				<button id="aboutBtn" class="gm-btn" type="button" name="button">About</button>
+				<button id="aboutBtn" class="gm-btn" type="button" name="button">Sobre</button>
 			</div>
 		</div>
 
@@ -117,13 +117,7 @@
 					<div>Credits</div>
 					<div class="credits-cont">
 						<ul class="credits-list">
-							<li>Nour Abu Saud</li>
-							<li>Ahmed El Gabri</li>
-							<li>Gustavo Siqueira</li>
-							<li>Eduardo Abreu</li>
-							<li>Michael Rurka</li>
-							<li>Kolton Gagnon</li>
-							<li>Philip Rurka</li>
+							<li>Raul.F</li>
 						</ul>
 					</div>
 				</div>
@@ -137,7 +131,7 @@
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon you-lost-icon"></div>
 					<div class="info-screen-ttl-txt-bld">Game Over</div>
-					<div >You Lost</div>
+					<div >VOCÊ PERDEU</div>
 				</div>
 				<div class="info-screen-txt-cont">
 					<div class="info-screen-body-txt-reg">Score</div>
@@ -145,7 +139,7 @@
 					<div class="info-screen-body-txt-reg">New High Score</div>
 					<div class="lvl-fnshd-highscore-icon"></div>
 				</div>
-				<div class="sbmt-tryagain-txt">Try again?</div>
+				<div class="sbmt-tryagain-txt">TENTE NOVAMENTE</div>
 				<div class="tpbl-circle c-white submit-circle"></div>
 			</div>
 		</div>
@@ -155,7 +149,7 @@
 			<div class="fixed-100w-wrapper">
 				<div id="tutPgStartGameBtn" class="tpbl-circle c-blue tut-circle"></div>
 				<div class="tut-arrow"></div>
-				<h2 class="tut-text">TAP THE CIRCLE<br/>TO START</h2>
+				<h2 class="tut-text">TOQUE NO CÍRCULO<br/>PARA INICIAR</h2>
 			</div>
 		</div>
 
@@ -232,7 +226,7 @@
 				<div class="info-screen-title-cont">
 					<div id="lvlLostIcon" class="info-screen-icon you-lost-icon"></div>
 					<div class="info-screen-ttl-txt-bld">Game Over</div>
-					<div id="lvlLostTtl" >You Lost</div>
+					<div id="lvlLostTtl" >VOCÊ PERDEU</div>
 				</div>
 				<div class="info-screen-txt-cont">
 					<div class="info-screen-body-txt-reg">Score</div>
@@ -240,7 +234,7 @@
 					<!-- <div class="info-screen-body-txt-reg">Best Score</div>
 					<div id="lvlLostBestScore" class="lvl-fnshd-score-nmb">146</div> -->
 				</div>
-				<div class="sbmt-tryagain-txt">Try again?</div>
+				<div class="sbmt-tryagain-txt">TENTAR NOVAMENTE</div>
 				<div id="lvlLostTryAgainBtn" class="tpbl-circle c-white submit-circle"></div>
 			</div>
 		</div>
