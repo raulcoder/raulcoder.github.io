@@ -32,6 +32,12 @@
 	
 	<script>
 		if(typeof navigator.serviceWorker !== 'underfined'){
+		  navigator.serviceWorker.register('/mani/pwabuilder-sw.js')
+		  }
+		  </script>
+		  
+		  <script>
+		if(typeof navigator.serviceWorker !== 'underfined'){
 		  navigator.serviceWorker.register('pwabuilder-sw.js')
 		  }
 		  </script>
