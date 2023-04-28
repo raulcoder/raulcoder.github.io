@@ -3,10 +3,10 @@
   "description": "Open source tapping game built with Javascript",
   "dir": "ltr",
   "display": "standalone",
-  "name": "TapTapTap - Open source tapping game built with Javascript",
+  "name": "TapTapTap",
   "orientation": "any",
   "scope": "/",
-  "short_name": "TapTapTap - Open source tapping game built with Javascript",
+  "short_name": "TapTapTap - O",
   "start_url": "/",
   "theme_color": "#0b1d31",
   "categories": [],
@@ -35,10 +35,6 @@
     },
     {
       "src": "/favicons/favicon.ico"
-    },
-    {
-      "src": "/favicons/apple-touch-icon.png",
-      "sizes": "180x180"
     },
     {
       "src": "/favicons/android-launchericon-512-512.png",
