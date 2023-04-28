@@ -1,43 +1,41 @@
 {
-    "background_color": "#f9f9fd",
-    "description": "Open source tapping game built with Javascript",
-    "dir": "ltr",
-    "display": "standalone",
-    "name": "TapTapTap - Open source tapping game built with Javascript",
-    "orientation": "any",
-    "scope": "/",
-    "short_name": "TapTapTap - Open source tapping game built with Javascript",
-    "start_url": "/",
-    "theme_color": "#0c77ef",
-    "categories": [
-      "games"
-    ],
-    "screenshots": [],
-    "icons": [
-      {
-        "src": "/favicons/favicon-32x32.png",
-        "type": "image/png",
-        "sizes": "32x32"
-      },
-      {
-        "src": "/favicons/favicon-16x16.png",
-        "type": "image/png",
-        "sizes": "16x16"
-      },
-      {
-        "src": "/favicons/favicon.ico"
-      },
-      {
-        "src": "/favicons/apple-touch-icon.png",
-        "sizes": "180x180"
-      },
-      {
-        "src": "/favicons/safari-pinned-tab.svg"
-      },
-      {
-        "src": "/images/im-og_image.png"
-      }
-    ],
-    "shortcuts": [],
-    "lang": "pt"
-  }
+  "background_color": "#ffffff",
+  "description": "Open source tapping game built with Javascript",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "TapTapTap - Open source tapping game built with Javascript",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "TapTapTap - Open source tapping game built with Javascript",
+  "start_url": "/",
+  "theme_color": "#0b1d31",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/favicons/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/favicons/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/favicons/favicon.ico"
+    },
+    {
+      "src": "/favicons/apple-touch-icon.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/favicons/safari-pinned-tab.svg"
+    },
+    {
+      "src": "/images/im-og_image.png"
+    }
+  ],
+  "shortcuts": [],
+  "lang": "pt"
+}
