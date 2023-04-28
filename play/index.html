@@ -28,7 +28,11 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://taptaptap.click/" />
 	<meta property="og:image" content="https://taptaptap.click/images/im-og_image.png" />
-
+	<script>
+		if(typeof navigator.serviceWorker !== 'underfined'){
+		  navigator.serviceWorker.register('pwabuilder-sw.js')
+		  }
+		  </script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3416596-20"></script>
 	<script>
