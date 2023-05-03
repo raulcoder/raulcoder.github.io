@@ -4,8 +4,8 @@
   "name": "raulcoder.com.br",
   "orientation": "any",
   "scope": "/",
-  "short_name": "raulcoder.com.br",
-  "start_url": "https://raulcoder.com.br/tap2/",
+  "short_name": "Circle Tap",
+  "start_url": "https://raulcoder.com.br/beta/",
   "theme_color": "#ffffff",
   "categories": [
     "games"
