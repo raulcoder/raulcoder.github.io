@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-	<title>Circle Tap</title>
-	<meta name="description" content="Circle Tap"/>
+	<title>KLICK X </title>
+	<meta name="description" content="Open source tapping game built with Javascript"/>
 	<link href="style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -14,20 +14,21 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/favicons/manifest.json">
-	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#0b1d31">
-	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<link rel="manifest" href="https://raulcoder.com.br/manifest.json">
+	<link rel="manifest" href="https://raulcoder.com.br/favicons/manifest.json">
 	<script src="https://raulcoder.com.br/pwabuilder-sw.js"></script>
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#0b1d31">
+	<link rel="shortcut icon" href="https://raulcoder.com.br/favicons/favicon.ico">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#0b1d31">
 
 	<!-- OG Details -->
-	<meta property="og:title" content="Circle Tap" />
-	<meta property="og:description" content="Circle Tap" />
-	<meta property="og:site_name" content="Circle Tap - " />
+	<meta property="og:title" content="KLICK X " />
+	<meta property="og:description" content="KLICK X - TESTE O SEU REFLEXO " />
+	<meta property="og:site_name" content="KLICK X " />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://raulcoder.com.br" />
-	<meta property="og:image" content="/images/im-og_image.png" />
+	<meta property="og:image" content="https://raulcoder.com.br/images/im-og_image.png" />
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3416596-20"></script>
@@ -39,13 +40,15 @@
 		gtag('config', 'UA-3416596-20');
 	</script>
 
-	<script>
+	
+		<script>
 		if(typeof navigator.serviceWorker !== 'underfined'){
 		  navigator.serviceWorker.register('https://raulcoder.com.br/pwabuilder-sw.js')
 		  }
 		  </script>
 
-
+	
+	
 </head>
 <body ontouchstart="">
 
@@ -78,7 +81,7 @@
 				<input type="radio" name="pT" class="toggleCheckbox" id="pauseMenuPageToggle">Pause Menu Page
 			</label>
 			<label class="vzbltyLabel" for="youLostPageToggle">
-				<input type="radio" name="pT" class="toggleCheckbox" id="youLostPageToggle">Você Perdeu Page
+				<input type="radio" name="pT" class="toggleCheckbox" id="youLostPageToggle">You Lost Page
 			</label>
 			<label class="vzbltyLabel" for="levelPassedPageToggle">
 				<input type="radio" name="pT" class="toggleCheckbox" id="levelPassedPageToggle">Level Passed Page
@@ -103,12 +106,12 @@
 			<div class="fixed-75w-wrapper">
 				<div class="gm-menu-header-cont">
 					<div class="tpbl-circle c-blue gm-menu-logo-bg"></div>
-					<h1 class="gm-menu-title">Circle Tap</h1>
-					<h2 class="gm-menu-subtitle">Desafie seus reflexos!</h2>
+					<h1 class="gm-menu-title">KLICK X</h1>
+					<h2 class="gm-menu-subtitle">Every Tap Matters</h2>
 				</div>
-				<button id="newGameBtn" class="gm-btn btn-blue" type="button" name="button">Novo Jogo</button>
+				<button id="newGameBtn" class="gm-btn btn-blue" type="button" name="button">New Game</button>
 				<!-- <button id="highScoresBtn" class="gm-btn" type="button" name="button">Best Score</button> -->
-				<button id="aboutBtn" class="gm-btn" type="button" name="button">Sobre</button>
+				<button id="aboutBtn" class="gm-btn" type="button" name="button">About</button>
 			</div>
 		</div>
 
@@ -116,19 +119,17 @@
 		<div id="pageAbout" class="page-cont page-about page-faded-bg anmtd-grdnt-bg blu-grdnt-bg no-bg">
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
-					<div class="info-screen-ttl-txt-bld">Sobre</div>
+					<div class="info-screen-ttl-txt-bld">About</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div>O Jogo</div>
-					<a href=" " class="txt-bold"></a>
-					<hr>					
+					<div>Created by</div>
+					<a href="" class="txt-bold">Raul F.</a>
+					<hr>
+					<div>Credits</div>
 					<div class="credits-cont">
 						<ul class="credits-list">
-                         <li>Bem-vindo ao Circle Tap!</li><li>O novo jogo de arcade viciante e desafiador que certamente o manterá entretido por horas!</li>
-                         <li>Neste jogo de ritmo acelerado, seu objetivo é tocar nos círculos azuis conforme eles aparecem na tela, tentando obter o máximo de pontos possível.</li>
-                         <li>Mas tenha cuidado, cada nível que avançar ficará cada vez mais difícil de acompanhar.</li>
-                         <li>Boa sorte, você vai precisar!</li>
-                         </ul>
+
+						</ul>
 					</div>
 				</div>
 				<div id="abtPageBackBtn" class="tpbl-circle c-white submit-circle"></div>
@@ -140,16 +141,16 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon you-lost-icon"></div>
-					<div class="info-screen-ttl-txt-bld">Fim de Jogo</div>
-					<div >Você Perdeu</div>
+					<div class="info-screen-ttl-txt-bld">Game Over</div>
+					<div >You Lost</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div class="info-screen-body-txt-reg">Pontos</div>
+					<div class="info-screen-body-txt-reg">Score</div>
 					<div id="lvlLostNewHighScore" class="lvl-fnshd-score-nmb">86</div>
-					<div class="info-screen-body-txt-reg">Nova Pontuação Máxima</div>
+					<div class="info-screen-body-txt-reg">New High Score</div>
 					<div class="lvl-fnshd-highscore-icon"></div>
 				</div>
-				<div class="sbmt-tryagain-txt">Tentar Novamente</div>
+				<div class="sbmt-tryagain-txt">Try again?</div>
 				<div class="tpbl-circle c-white submit-circle"></div>
 			</div>
 		</div>
@@ -159,7 +160,7 @@
 			<div class="fixed-100w-wrapper">
 				<div id="tutPgStartGameBtn" class="tpbl-circle c-blue tut-circle"></div>
 				<div class="tut-arrow"></div>
-				<h2 class="tut-text">TOQUE NO CIRCULO<br/> PARA INICIAR </h2>
+				<h2 class="tut-text">TOQUE NO CÍRCULO<br/>PARA INICIAR</h2>
 			</div>
 		</div>
 
@@ -217,7 +218,7 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon puz-icon"></div>
-					<div class="info-screen-ttl-txt-bld">JOGO PAUSADO</div>
+					<div class="info-screen-ttl-txt-bld">GAME PAUSED</div>
 				</div>
 				<div class="info-screen-txt-cont">
 					<div class="info-screen-body-txt-reg">Score</div>
@@ -225,7 +226,7 @@
 				</div>
 				<div class="puz-menu-btnz-cont">
 					<button id="pmCntnuGmBtn" class="gm-btn btn-blue">Continue</button>
-					<button id="pmRstrtLvlBtn" class="gm-btn pm-rstrt-lvl-btn">Reiniciar</button>
+					<button id="pmRstrtLvlBtn" class="gm-btn pm-rstrt-lvl-btn">Restart</button>
 				</div>
 			</div>
 		</div>
@@ -235,8 +236,8 @@
 			<div class="fixed-75w-wrapper">
 				<div class="info-screen-title-cont">
 					<div id="lvlLostIcon" class="info-screen-icon you-lost-icon"></div>
-					<div class="info-screen-ttl-txt-bld">Fim de Jogo</div>
-					<div id="lvlLostTtl" >Você Perdeu</div>
+					<div class="info-screen-ttl-txt-bld">Game Over</div>
+					<div id="lvlLostTtl" >You Lost</div>
 				</div>
 				<div class="info-screen-txt-cont">
 					<div class="info-screen-body-txt-reg">Score</div>
@@ -244,7 +245,7 @@
 					<!-- <div class="info-screen-body-txt-reg">Best Score</div>
 					<div id="lvlLostBestScore" class="lvl-fnshd-score-nmb">146</div> -->
 				</div>
-				<div class="sbmt-tryagain-txt">Tentar Novamente</div>
+				<div class="sbmt-tryagain-txt">Try again?</div>
 				<div id="lvlLostTryAgainBtn" class="tpbl-circle c-white submit-circle"></div>
 			</div>
 		</div>
@@ -255,10 +256,10 @@
 				<div class="info-screen-title-cont">
 					<div class="info-screen-icon flag-icon"></div>
 					<div id="lvlPssdTtl">Level 2</div>
-					<div class="info-screen-ttl-txt-bld">Concluído</div>
+					<div class="info-screen-ttl-txt-bld">Passed</div>
 				</div>
 				<div class="info-screen-txt-cont">
-					<div class="info-screen-body-txt-reg">Pontos</div>
+					<div class="info-screen-body-txt-reg">Score</div>
 					<div id="lvlPssdScore" class="lvl-fnshd-score-nmb">521</div>
 					<div id="lvlPssdBonusScore" class="grow-animation"></div>
 				</div>
@@ -270,5 +271,7 @@
 
 	<!-- logic & brain -->
 	<script src="js/habibiScript.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5299688566342061"
+     crossorigin="anonymous"></script>
 </body>
 </html>
