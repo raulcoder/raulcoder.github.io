@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://raulcoder.com.br/pwabuilder-sw.js"></script>
+  <script>
+		if(typeof navigator.serviceWorker !== 'underfined'){
+		  navigator.serviceWorker.register('https://raulcoder.com.br/pwabuilder-sw.js')
+		  }
+		  </script>
+
   <head>
     <title>Meu vídeo em tela cheia com preload</title>
     <style>
