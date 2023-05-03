@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meu vídeo em tela cheia com preload</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop>
+      <source src="intro/arquivo.mp4" type="video/mp4">
+    </video>
+    <script>
+      var meuVideo = document.getElementsByTagName("video")[0];
+      meuVideo.onloadeddata = function() {
+        setTimeout(function() {
+          window.location.href = "play.html";
+        }, 7000);
+      }
+    </script>
+  </body>
+</html>
