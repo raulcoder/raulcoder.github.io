@@ -248,25 +248,25 @@ img{
   bottom: 1.5rem;
 }
 
-/*========== Inicio ==========*/
-.Inicio__container{
+/*========== HOME ==========*/
+.home__container{
   height: calc(100vh - var(--header-height));
   align-content: center;
 }
 
-.Inicio__title{
+.home__title{
   font-size: var(--biggest-font-size);
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
-.Inicio__subtitle{
+.home__subtitle{
   font-size: var(--h1-font-size);
   color: var(--title-color);
   margin-bottom: var(--mb-4);
 }
 
-.Inicio__img{
+.home__img{
   width: 300px;
   justify-self: center;
 }
@@ -285,45 +285,45 @@ img{
   background-color: var(--first-color-alt);
 }
 
-/*========== sobre ==========*/
-.sobre__data{
+/*========== ABOUT ==========*/
+.about__data{
   text-align: center;
 }
 
-.sobre__description{
+.about__description{
   margin-bottom: var(--mb-3);
 }
 
-.sobre__img{
+.about__img{
   width: 280px;
   border-radius: .5rem;
   justify-self: center;
 }
 
-/*========== servicos ==========*/
-.servicos__container{
+/*========== SERVICES ==========*/
+.services__container{
   row-gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.servicos__content{
+.services__content{
   text-align: center;
 }
 
-.servicos__img{
+.services__img{
   width: 64px;
   height: 64px;
   fill: var(--first-color);
   margin-bottom: var(--mb-2);
 }
 
-.servicos__title{
+.services__title{
   font-size: var(--h3-font-size);
   color: var(--title-color);
   margin-bottom: var(--mb-1);
 }
 
-.servicos__description{
+.services__description{
   padding: 0 1.5rem;
 }
 
@@ -398,12 +398,12 @@ img{
   justify-self: center;
 }
 
-/*========== contato ==========*/
-.contato__container{
+/*========== CONTACT ==========*/
+.contact__container{
   text-align: center;
 }
 
-.contato__description{
+.contact__description{
   margin-bottom: var(--mb-3);
 }
 
@@ -456,29 +456,29 @@ img{
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px){
-  .Inicio__container,
-  .sobre__container,
+  .home__container,
+  .about__container,
   .app__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }
 
-  .sobre__data, .sobre__initial,
+  .about__data, .about__initial,
   .app__data, .app__initial,
-  .contato__container, .contato__initial{
+  .contact__container, .contact__initial{
     text-align: initial;
   }
 
-  .sobre__img, .app__img{
+  .about__img, .app__img{
     width: 380px;
     order: -1;
   }
 
-  .contato__container{
+  .contact__container{
     grid-template-columns: 1.75fr 1fr;
     align-items: center;
   }
-  .contato__button{
+  .contact__button{
     justify-self: center;
   }
 }
@@ -511,12 +511,12 @@ img{
     margin-left: var(--mb-2);
   }
 
-  .Inicio__container{
+  .home__container{
     height: 100vh;
     justify-items: center;
   }
 
-  .servicos__container,
+  .services__container,
   .menu__container{
     margin-top: var(--mb-6);
   }
@@ -543,11 +543,11 @@ img{
     margin-right: auto;
   }
 
-  .Inicio__img{
+  .home__img{
     width: 500px;
   }
 
-  .sobre__container,
+  .about__container,
   .app__container{
     column-gap: 7rem;
   }
@@ -555,7 +555,7 @@ img{
 
 /* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
-    .Inicio__container {
+    .home__container {
         height: 640px;
     }
 }
