@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Inconsolata');
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+
+			:focus {
+				outline: none;
+			}
+
+			body {
+				--color: blue;
+				display: flex;
+				font-size: 18px;
+				font-family: Poppins;
+				overflow: hidden;
+			}
+
+			section {
+				width: 50%;
+				height: 100vh;
+				display: grid;
+				place-items: center;
+			}
+
+			table {
+				border-collapse: collapse;
+			}
+
+			td {
+				position: relative;
+				width: 2em;
+				height: 2em;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: Inconsolata;
+			}
+
+			td:not(:empty) {
+				border: 1px dashed;
+			}
+
+			[index]::before {
+				position: absolute;
+				font-size: .6em;
+				top: 0;
+				left: 0;
+				font-weight: bold;
+				color: white;
+				border-bottom-right-radius: .4em;
+				padding: 0 .2em;
+				background-color: var(--color);
+				content: attr(index);
+			}
+
+			td.current {
+				border-width: 2px;
+				border-color: var(--color);
+			}
+
+			td.done::after {
+				content: attr(letter);
+			}
+
+			main {
+				line-height: 1.75;
+				text-align: center;
+			}
+
+			label {
+				display: block;
+				color: var(--color);
+				margin-bottom: 2em;
+			}
+
+			input {
+				width: 60%;
+				border: 2px solid;
+				border-radius: 2em;
+				padding: .5em;
+				font-size: 18px;
+				font-weight: bold;
+				letter-spacing: .25em;
+				text-transform: uppercase;
+				font-family: Inconsolata;
+				color: currentColor;
+			}
+
+
+			svg {
+				width: 1.5em;
+				height: 1.5em;
+				position: relative;
+				top: .4em;
+				left: -2.5em;
+			}
+
+			ol {
+				text-align: left;
+				list-style-position: inside;
+			}
+
+			::marker {
+				color: var(--color);
+			}
+
+			li>span {
+				padding: 0 .5em;
+				pointer-events: none;
+				user-select: none;
+				border-radius: 1em;
+			}
+
+			li:not([class])>span {
+				filter: blur(.25em);
+			}
+
+			audio {
+				display: none;
+			}
+
+			li.done>span {
+				text-decoration: line-through;
+				text-decoration-color: var(--color);
+			}
+
+			li:last-child.current>span>span {
+				color: hotpink;
+				font-weight: bolder;
+			}
+
+			aside {
+				position: absolute;
+				height: 100vh;
+				width: 100%;
+				transition: background-color 10s;
+				z-index: -1;
+			}
+
+			.end aside {
+				z-index: 0;
+				display: flex;
+				align-items: center;
+				background-color: black;
+			}
+
+			img {
+				width: 100%;
+				opacity: 0;
+				filter: sepia(1) blur(1px);
+				transform: scale(10) translateY(9%);
+				transition: opacity 30s, transform 60s, filter 120s;
+				transition-delay: 7s;
+			}
+
+			.end img {
+				opacity: 1;
+				filter: none;
+				transform: none;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<table></table>
+		</section>
+		<section>
+			<main>
+				<audio preload src="key.mp3"></audio>
+				<audio preload src="right.mp3"></audio>
+				<audio preload src="wrong.mp3"></audio>
+				<label>
+					<input autofocus>
+					<svg viewBox="0 0 50 50">
+						<path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-transform:none;isolation:auto;mix-blend-mode:normal" d="M 28.957031 4 C 24.022446 4 20 8.0224458 20 12.957031 L 20 14 C 20 14.264591 19.894727 14.519336 19.707031 14.707031 C 19.519336 14.894727 19.264591 15 19 15 L 10.886719 15 C 8.5299002 15 6.2697706 15.937261 4.6035156 17.603516 C 2.9372606 19.269771 2 21.5299 2 23.886719 L 2 31.400391 C 2 31.710032 2.0186192 32.015079 2.0507812 32.316406 L 2.0507812 38.400391 C 2.0507812 43.110908 5.8890922 46.949219 10.599609 46.949219 L 39.400391 46.949219 C 44.110908 46.949219 47.949219 43.110908 47.949219 38.400391 L 47.949219 32.316406 C 47.981381 32.015079 48 31.710032 48 31.400391 L 48 13 A 1.0001 1.0001 0 0 0 48 12.982422 C 47.951893 10.314927 47.094504 8.0315875 45.509766 6.4375 C 43.925849 4.8442397 41.655502 3.9911248 39 4 L 28.957031 4 z M 28.957031 6 L 39 6 A 1.0001 1.0001 0 0 0 39.003906 6 C 41.239626 5.99178 42.922035 6.6709938 44.091797 7.8476562 C 45.261564 9.0243189 45.959107 10.750075 46 13.017578 L 46 31.400391 C 46 35.056846 43.056846 38 39.400391 38 L 10.599609 38 C 6.9431546 38 4 35.056846 4 31.400391 L 4 23.886719 C 4 22.059537 4.7258331 20.309323 6.0175781 19.017578 C 7.3093231 17.725833 9.0595368 17 10.886719 17 L 19 17 C 19.795409 17 20.558789 16.683398 21.121094 16.121094 C 21.683398 15.558789 22 14.795409 22 14 L 22 12.957031 C 22 9.1036171 25.103617 6 28.957031 6 z M 33.984375 12.986328 A 1.0001 1.0001 0 0 0 33 14 L 33 22 C 33 24.773666 30.773666 27 28 27 L 17 27 L 17 23 L 12 28 L 17 33 L 17 29 L 28 29 C 31.854334 29 35 25.854334 35 22 L 35 14 A 1.0001 1.0001 0 0 0 33.984375 12.986328 z M 3.9492188 36.841797 C 5.5283426 38.767201 7.9242408 40 10.599609 40 L 39.400391 40 C 42.075759 40 44.471657 38.767201 46.050781 36.841797 L 46.050781 38.400391 C 46.050781 42.083873 43.083873 45.050781 39.400391 45.050781 L 10.599609 45.050781 C 6.9161274 45.050781 3.9492187 42.083873 3.9492188 38.400391 L 3.9492188 36.841797 z" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible">
+					</svg>
+				</label>
+				<ol></ol>
+			</main>
+		</section>
+		<aside>
+			<audio preload src="pagode.mp3"></audio>
+			<img src="photo.jpg">
+		</aside>
+		<script type="module">
+			import confetti from 'https://unpkg.com/canvas-confetti?module'
+			let table = document.querySelector('table')
+			let input = document.querySelector('input')
+			let ol = document.querySelector('ol')
+			let label = document.querySelector('label')
+			let [key, right, wrong, piano] = [...document.querySelectorAll('audio')]
+			let words = [
+				{
+					clue: 'Qual é a cor da sua trança?',
+					answer: 'vermelha',
+					x: -2,
+					y: 0
+				},
+				{
+					clue: 'Qual é o seu estilo de música favorito?',
+					answer: 'pagode',
+					x: -3,
+					y: 6,
+					top: true
+				},
+				{   //3
+					clue: 'Você é formada em ?',
+					answer: 'nutrição',
+					x: -1,
+					y: 3
+				},
+				{
+					clue: 'Qual foi a sua última série assistida ?',
+					answer: 'the blacklist',
+					x: -4,
+					y: -3
+				},
+				{
+					//5
+
+					clue: 'Qual é a sua bebida favorita quando vai ao barzinho ?',
+					answer: 'chopp de vinho',
+					x: -6,
+					y: 6
+				},
+				{
+					clue: 'Qual é o nome e sobrenome da pretinha do sorriso lindo?',
+					answer: 'raíra felix',
+					x: -5,
+					y: 5,
+					top: true
+				},
+
+
+			]
+			let getSize = key => words.reduce((size, word) => {
+				let value = Math.abs(word[key])
+				if ((key == 'x' && !word.top) || (key == 'y' && word.top)) value += word.answer.length
+				return value > size ? value : size
+			}, 0)
+			let sizes = {
+				x: getSize('x'),
+				y: getSize('y')
+			}
+			let getCenter = axis => Math.ceil(sizes[axis] / 2)
+			let centers = {
+				x: getCenter('x'),
+				y: getCenter('y')
+			}
+			let getCell = word => table.querySelector(`tr:nth-child(${centers.y - word.y})>td:nth-child(${centers.x + word.x})`)
+			let getCells = ({ ...word }) => word.answer.split('').map(letter => {
+				let cell = getCell(word)
+				word.top ? word.y-- : word.x++
+				return cell
+			})
+			table.innerHTML = `<tr>${'<td></td>'.repeat(sizes.x)}</tr>`.repeat(sizes.y)
+			words.forEach((word, index) => {
+				getCell(word).setAttribute('index', ++index)
+				getCells(word).forEach(cell => cell.textContent = ' ')
+				ol.innerHTML += `<li><span>${word.clue}</span></li>`
+			})
+			let current = 0
+			let putClue = (index, name) => ol.querySelector(`li:nth-child(${index + 1})`).className = name
+			let putCell = (current, name, word = words[current]) => getCells(word).forEach((cell, index) => {
+				if (name == 'done') cell.textContent = word.answer[index]
+				cell.classList.toggle('current')
+			})
+			putCell(current, 'current')
+			putClue(current, 'current')
+			input.onkeypress = async e => {
+				if (e.key == 'Enter') {
+					if (input.value.toLowerCase() == words[current].answer) {
+						if (current != words.length - 1) {
+							right.play()
+							confetti({
+								angle: 60,
+								origin: { x: 0 }
+							})
+							confetti({
+								angle: 120,
+								origin: { x: 1 }
+							})
+							putCell(current, 'done')
+							putClue(current, 'done')
+							putClue(++current, 'current')
+							putCell(current, 'current')
+						} else {
+							let cells = getCells(words[current])
+							let timeOf = time => new Promise(resolve => setTimeout(resolve, time))
+							input.value = ''
+							input.blur()
+							for (let [index, letter] of Object.entries({
+								1: '3',
+								2: '2',
+								3: '1',
+								4: ' '
+								
+							})) {
+								cells[index].textContent = letter
+								key.currentTime = 0
+								key.play()
+								await timeOf(300)
+							}
+							document.body.className = 'end'
+							piano.currentTime = 3
+							piano.play()
+						}
+						input.value = ''
+					} else {
+						wrong.currentTime = 0
+						wrong.play()
+						let getTransform = (shift, times) => `translate(0) translate(${shift}px) translate(-${shift}px)`.repeat(times).split(' ')
+						label.animate({
+							color: ['tomato', 'tomato'],
+							transform: getTransform(10, 4),
+						}, 300)
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
